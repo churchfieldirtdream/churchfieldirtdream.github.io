@@ -1,3 +1,9 @@
+*,*:before,*:after{outline:0;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.flex{display:-webkit-flex;display:flex;}
+.flex-wrap{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;}
+.flex-align{-webkit-align-items:center;align-items:center;}
+.w-full{width:100%;}
+
 *{
     margin: 0;
     padding: 0;
@@ -60,4 +66,12 @@ body{
     height: 100%;
     object-fit: contain;
     border: 1px solid whitesmoke;
+}
+
+@media screen and (max-width:480px) {
+#simp .simp-controls .simp-volume,#simp .simp-controls .simp-others{display:none;}
+#simp .simp-controls .simp-time{margin-right:10px;}
+}
+@media screen and (max-width:370px) {
+#simp .simp-time .simp-slash,#simp .simp-time .end-time{display:none;}
 }
