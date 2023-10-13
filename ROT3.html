@@ -1,0 +1,173 @@
+<html>
+
+<head>
+
+	<title>THE EYES</title>
+
+	<style>
+img { cursor: pointer; }
+
+
+     body {  background: black;text-align: center;}
+
+	         @font-face { font-family: JMH; src: url('JMH.ttf'); } 
+
+     div {
+       max-width: 900px;
+       margin-left: auto;
+       margin-right: auto;
+       margin-top: 400px}
+
+eye {margin-top: 100px;
+}
+
+
+a:link {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+a:visited {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+       a:hover {
+  color: darkred;
+}
+
+.button {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  font-family: JMH;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: darkred;
+  cursor: pointer;
+}
+
+
+    </style>
+</head>
+
+
+
+
+<body>
+	<font size="5"> 
+
+<div class="eye">
+
+    <a>
+    <img id=eye src="icons/eyes.gif"
+    style=  "
+    filter: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 400px;
+  margin: auto;"
+  onClick="togglePlay();invert()">
+    </a>
+</div>
+
+
+<div>
+<!---AUDIO PLAY PAUSE--->
+
+<audio id="myAudio" volume="0.0"  src="audio/7063.wav" preload="auto" loop>
+</audio>
+
+<script type="text/javascript">
+    let vid = document.getElementById("myAudio");
+vid.volume = 0.3;
+</script>
+
+<script type="text/javascript">
+var myAudio = document.getElementById("myAudio");
+var isPlaying = false;
+
+function togglePlay() {
+  isPlaying ? myAudio.pause() : myAudio.play();
+};
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+
+</script>
+
+
+
+
+<!---FILTER ON CLICK--->
+    <script>
+function invert() {
+  var x = document.getElementById("eye");
+
+if (x.style.filter === "none") {
+x.style.filter = "blur(10px)"; 
+}
+
+else {x.style.filter = "none";}
+}
+</script>
+
+
+
+
+<!---PASSWORD FORM--->
+
+
+<form onSubmit="return false;" action="">
+
+    <input type="text" id="pswd" size="100">
+
+</form>
+
+<form>
+
+    <input class="button" type="button" value="ENTER" onclick="checkPswd();">
+    
+</form>
+
+
+<script type="text/javascript">
+window.addEventListener("keydown", checkKeyPressed, false);
+
+function checkKeyPressed(evt) {
+    if (evt.keyCode == "13") 
+    {checkPswd()}
+}
+</script>
+
+
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword1 = "the eyes gave life man will be forgotten";
+        var confirmPassword2 = "7063";
+        var confirmPassword3 = "she lied";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword1)      {window.location="ROT4.html";}
+        else if (password == confirmPassword2)      {window.location="ROT5.html";}
+        else if (password == confirmPassword3)      {window.location="ROT6.html";}}
+</script>
+
+</div>
+
+
+
+</body>
+</html>
