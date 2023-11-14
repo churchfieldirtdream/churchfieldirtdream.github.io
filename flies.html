@@ -24,7 +24,10 @@ a:hover {color: darkred;}
   min-width: 100%;
   min-height: 100%;
 }
-
+		
+ #sequence {
+	 animation:fadeIn 7s;
+ }
 
 
 
@@ -50,7 +53,7 @@ a:hover {color: darkred;}
 
 
 
-<body onload="setInterval(fade, 7000);setTimeout(acc, 70000);textSequence(i);">
+<body onload="setTimeout(acc, 70000);textSequence(i);">
 
 
 
@@ -79,20 +82,6 @@ top: 700px;
 ">
 </div>
 
-
-<script type="text/javascript">
-
-    var q1 = document.getElementById("sequence");
-
-    function fade(){
-
-document.body.removeChild(q1);
-document.body.appendChild(q1);
-
-    q1.style.animation = "fadeInOut 10s";}
-
-
-</script>
 
 <script type="text/javascript">
 
