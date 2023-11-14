@@ -1,0 +1,293 @@
+<html>
+
+<head>
+
+	<title>TRAUMA</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+
+	<style>
+
+@font-face { font-family: JMH; 
+    src: url('JMH.ttf'); }
+
+@font-face { font-family: JMHB; 
+    src: url('JMHBLACK.ttf'); 
+    font-weight:bold; }
+
+body {
+    background-image: url(icons/signalbgvertical.gif);
+    background-size: 100%;
+    text-align: center;
+    }
+
+a:link {color: whitesmoke; text-decoration: none;}
+a:visited {color: whitesmoke; text-decoration: none;}
+a:hover {color: darkred;}	   
+
+
+#buttonn:hover {color: darkred;}    
+#buttony:hover {color: darkred;}    
+
+
+#message {
+  animation: fadeIn 5s;
+}
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInSlow {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+@keyframes fadeInOut {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity:1; }
+}
+
+
+
+#buttony {
+    display: inline;
+    text-align: center;
+    animation-name: fadeInSlow;
+    animation-duration: 5s;
+    font-family: JMH;
+    text-decoration:none;
+    color: whitesmoke;
+    font-size: 100;
+    margin-top: 500px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1}
+
+    #buttonn {
+    display: inline;
+    text-align: center;
+    animation-name: fadeInSlow;
+    animation-duration: 5s;
+    font-family: JMH;
+    text-decoration:none;
+    color: whitesmoke;
+    font-size: 100;
+    margin-top: 500px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1}
+
+    </style>
+</head>
+
+
+
+
+<body>
+
+<div id="scar" style="display: none;"> 
+    <img src="icons/home logo.gif"
+       style="display: ;
+       position: fixed;
+       z-index: 0;
+       top: 0px;
+       text-align: center;
+       margin-left: 0px;
+       right: 450px;
+       width: 50%;
+       mix-blend-mode: screen;
+       ">
+</div>
+
+<div id="message" 
+style="
+  margin: auto;
+  width: 100%;
+    justify-content: center;
+    text-align: center;
+    position:absolute;
+    font-family: JMHB;
+    text-decoration:none;
+    color: whitesmoke;
+    font-size: 75;
+    top: 400px;
+    z-index: 1;">Does sleep frighten you?   
+</div>
+
+
+
+<button id="buttony" onclick="fade();setTimeout(nextq, 1500);">
+
+    Yes
+
+</button>
+
+
+<button id="buttonn" onclick="fade();setTimeout(nextqn, 1500);">
+
+    No
+
+</button>
+<script type="text/javascript">
+function play() {
+  var audio = new Audio(src="audio/codes/scar1.wav");
+  audio.play();
+}
+</script>
+
+<script type="text/javascript">
+function play1() {
+  var audio = new Audio(src="audio/codes/static1.wav");
+  audio.play();
+}
+</script>
+
+<script type="text/javascript">
+
+    var q1 = document.getElementById("message");
+
+    function fade(){
+
+document.body.removeChild(q1);
+document.body.appendChild(q1);
+
+    q1.style.animation = "fadeInOut 3s";}
+
+
+</script>
+
+<script type="text/javascript">
+ 
+ var clicks = 0;
+ var q1 = document.getElementById("message");
+
+ function nextq() {
+
+var noremove = document.getElementById("buttonn");
+
+   clicks += 1;
+   var message = "";
+
+   if(clicks==1)
+   {message = "Do your dreams often end with dying?";
+play1();}
+
+   else if(clicks==2)
+   {message ="Do you like being hurt?";}
+
+   else if(clicks==3)
+   {message ="Does reality often feel like a memory?";}
+
+   else if(clicks==4)
+   {message ="Do you like hurting others?";}
+
+   else if(clicks==5)
+   {message ="Did you eat today?";}
+
+   else if(clicks==6)
+   {message ="Does pain inspire you?";}
+
+   else if(clicks==7)
+   {message ="Do you keep secrets?";}
+
+   else if(clicks==8)
+   {message ="Pain is a necessity.";}
+
+   else if(clicks==9)
+   {message ="You remember dying.";}
+
+   else if(clicks==10)
+   {message ="It felt good.";}
+
+   else if(clicks==11)
+   {message = "Go back to sleep.";
+    noremove.style.visibility  = "hidden";
+    scarr.style.display  = "block";
+    play();}
+
+   else if(clicks==12)
+   {window.location="/ROT15";}
+
+   document.getElementById("message").innerHTML = message;
+ };
+</script>
+
+ <script type="text/javascript">
+ 
+ var clicks = 0;
+ var q2 = document.getElementById("message");
+ var btn = document.getElementById("buttonn");
+ var scarr = document.getElementById("scar");
+
+ function nextqn() {
+
+    var noremove = document.getElementById("buttonn");
+    var scarr = document.getElementById("scar");
+
+   clicks += 1;
+   var message = "";
+
+   if(clicks==1)
+   {message = "Do you mistake dreams for reality?";
+play1();}
+
+   else if(clicks==2)
+   {message ="Do you like being hurt?";}
+
+   else if(clicks==3)
+   {message ="Are you sure?";}
+
+   else if(clicks==4)
+   {message ="Does pain feel safe?";}
+
+   else if(clicks==5)
+   {message ="Are you sure?";}
+
+   else if(clicks==6)
+   {message ="You like being hurt.";}
+
+   else if(clicks==7)
+   {message ="Admit it.";}
+
+   else if(clicks==8)
+   {message ="The static is alluring.";}
+
+   else if(clicks==9)
+   {message ="Yes it is.";}
+
+   else if(clicks==10)
+   {message ="You are deeply rotten.";}
+
+   else if(clicks==11)
+   {message ="YOU ARE DEEPLY ROTTEN.";
+   noremove.style.visibility  = "hidden";
+   scarr.style.display  = "block";
+   play();}
+
+   else if(clicks==12)
+   {window.location="beyond.html";}
+
+
+   document.getElementById("message").innerHTML = message;
+
+ };
+
+</script>
+
+
+</body>
+
+</html>

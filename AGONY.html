@@ -1,0 +1,138 @@
+<html>
+
+<head>
+
+	<title>AGONY</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+
+	<style>
+
+@font-face { font-family: JMH; 
+    src: url('JMH.ttf'); }
+
+@font-face { font-family: JMH; 
+    src: url('JMHBLACK.ttf'); 
+    font-weight:bold; }
+
+
+     body {background: black;
+     	text-align: center;}
+	    
+
+div {
+  max-width: 900px;
+  margin: auto;}
+
+a:link {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+a:visited {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+       a:hover {
+  color: darkred;
+}
+
+.button {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  font-family: JMH;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: darkred;
+  cursor: pointer;
+}
+
+.passwordform {
+margin-top: 300px;
+height: 50px;
+
+}
+
+    </style>
+</head>
+
+
+
+
+<body>
+	<font size="5"> 
+
+
+
+
+<!--LOVECRAFT TEXT-->
+<div>
+	<p
+	style="position:relative;
+	font-family: JMH;
+	color: whitesmoke;
+	text-decoration:none;
+	top:280px;
+	z-index: 1;">
+
+its <b>first</b> is the third of <i>ALTAR</i></br>
+and the fourth of <i>ALERT</i> is its <b>second</b></br>
+it's <b>third</b> is the first of <i>ABYSS</i> </br>
+and the second of <i>GUARDIAN</i> is its <b>fourth</b> </br>
+it's <b>fifth</b> is the last of <i>PRISM</i> </br>
+and the third of <i>WRAITH</i> is its <b>final</b></br>
+
+    </p>
+</div>
+
+
+<!---PASSWORD FORM--->
+
+<div class=passwordform>
+<form onSubmit="return false;" action="">
+
+    <input type="text" id="pswd" size="50">
+
+</form>
+
+<form>
+
+    <input class="button" type="button" value="ENTER" onclick="checkPswd();">
+    
+</form>
+
+
+<script type="text/javascript">
+window.addEventListener("keydown", checkKeyPressed, false);
+
+function checkKeyPressed(evt) {
+    if (evt.keyCode == "13") 
+    {checkPswd()}
+}
+</script>
+
+
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword1 = "TRAUMA";
+        var confirmPassword2 = "trauma";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword1)      {window.location="/TRAUMA";}
+        else if (password == confirmPassword2)      {window.location="/TRAUMA";}}
+</script>
+</div>
+
+
+
+</body>
+
+</html>

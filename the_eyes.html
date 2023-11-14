@@ -1,0 +1,484 @@
+<html>
+
+<head>
+
+	<title>THE EYES</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+
+	<style>
+img { cursor: pointer; }
+
+
+     body {  background: black;text-align: center;}
+
+	         @font-face { font-family: JMH; src: url('JMH.ttf'); } 
+
+     #pform {
+       max-width: 900px;
+       margin-left: auto;
+       margin-right: auto;
+       margin-top: 200px}
+
+            #lash {
+       max-width: 900px;
+       margin-left: auto;
+       margin-right: auto;}
+
+            #olsen {
+       max-width: 900px;
+       margin-left: auto;
+       margin-right: auto;}
+
+                   #ruwet {
+       max-width: 900px;
+       margin-left: auto;
+       margin-right: auto;}
+
+a:link {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+a:visited {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+       a:hover {
+  color: darkred;
+}
+
+.button {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  font-family: JMH;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: darkred;
+  cursor: pointer;
+}
+
+
+    </style>
+</head>
+
+
+
+
+<body>
+	<font size="5"> 
+
+<div class="eye">
+
+    <a>
+    <img id=eye1 src="icons/eye2.gif"
+    style="
+display: none;
+  filter: blur(10px);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 800px;
+  margin: auto;"
+  onClick="togglePlay1();invert1();invert1a()">
+    </a>
+
+
+        <a href="/church1">
+    <img id=mouth src="icons/eyes.gif"
+    style="
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 800px;
+  margin: auto;">
+    </a>
+
+
+    <a>
+    <img id=eye2 src="icons/eye1.gif"
+    style="
+
+  filter: blur(10px);
+  position: absolute;
+  left: 0;
+  right: 400px;
+  top: 0;
+  bottom: 800px;
+  margin: auto;"
+  onClick="togglePlay2();invert2();invert2a();">
+    </a>
+
+        <a>
+    <img id=eye3 src="icons/eye3.gif"
+    style="
+display: none;
+  filter: blur(10px);
+  position: absolute;
+  left: 400px;
+  right: 0px;
+  top: 0;
+  bottom: 800px;
+  margin: auto;"
+  onClick="togglePlay3();invert3();invert3a()">
+    </a>
+</div>
+
+
+
+
+<!---AUDIO PLAY PAUSE--->
+
+<audio id="myAudio1" volume="0.0"  src="audio/codes/7063.wav" preload="auto" loop></audio>
+<audio id="myAudio2" volume="0.0" src="audio/codes/7172.wav" preload="auto" loop></audio>
+<audio id="myAudio3" volume="0.0" src="audio/codes/she lied.wav" preload="auto" loop></audio>
+
+<script type="text/javascript">
+let vid = document.getElementById("myAudio1");
+let vid = document.getElementById("myAudio2");
+let vid = document.getElementById("myAudio3");
+vid.volume = 0.3;
+</script>
+
+
+<script type="text/javascript">
+var myAudio1 = document.getElementById("myAudio1");
+var isPlaying = false;
+
+function togglePlay1() {
+isPlaying ? myAudio1.pause() : myAudio1.play();};
+myAudio1.onplaying = function() {isPlaying = true;};
+myAudio1.onpause = function() {isPlaying = false;};
+
+
+</script>
+
+
+
+<script type="text/javascript">
+var myAudio2 = document.getElementById("myAudio2");
+var isPlaying = false;
+
+function togglePlay2() {
+isPlaying ? myAudio2.pause() : myAudio2.play()};
+myAudio2.onplaying = function() {isPlaying = true;};
+myAudio2.onpause = function() {isPlaying = false;};
+
+
+</script>
+
+
+
+<script type="text/javascript">
+var myAudio3 = document.getElementById("myAudio3");
+var isPlaying = false;
+
+function togglePlay3() {
+isPlaying ? myAudio3.pause() : myAudio3.play();};
+myAudio3.onplaying = function() {isPlaying = true;};
+myAudio3.onpause = function() {isPlaying = false;};
+
+
+</script>
+
+
+
+
+
+
+
+
+
+<!---FILTER ON CLICK--->
+<script>
+function invert1() {
+
+var x = document.getElementById("eye1");
+
+if (x.style.filter === "blur(10px)") {x.style.filter = "none"; }
+
+else {x.style.filter = "blur(10px)";}}
+</script>
+
+<script>
+function invert2() {
+    
+var x = document.getElementById("eye2");
+
+if (x.style.filter === "blur(10px)") {x.style.filter = "none"; }
+
+else {x.style.filter = "blur(10px)";}}
+</script>
+
+<script>
+function invert3() {
+    
+var x = document.getElementById("eye3");
+
+if (x.style.filter === "blur(10px)") {x.style.filter = "none"; }
+
+else {x.style.filter = "blur(10px)";}}
+</script>
+
+<script>
+function invert1a() {
+    
+var x = document.getElementById("eye2");
+var y = document.getElementById("eye3");
+
+if (x.style.filter === "none") {x.style.filter = "blur(10px)"; }
+
+else {x.style.filter = "blur(10px)";}
+
+if (y.style.filter === "none") {y.style.filter = "blur(10px)"; }
+
+else {y.style.filter = "blur(10px)";}}
+</script>
+
+<script>
+function invert2a() {
+    
+var x = document.getElementById("eye1");
+var y = document.getElementById("eye3");
+
+if (x.style.filter === "none") {x.style.filter = "blur(10px)"; }
+
+else {x.style.filter = "blur(10px)";}
+
+if (y.style.filter === "none") {y.style.filter = "blur(10px)"; }
+
+else {y.style.filter = "blur(10px)";}}
+</script>
+
+<script>
+function invert3a() {
+    
+var x = document.getElementById("eye2");
+var y = document.getElementById("eye1");
+
+if (x.style.filter === "none") {x.style.filter = "blur(10px)"; }
+
+else {x.style.filter = "blur(10px)";}
+
+if (y.style.filter === "none") {y.style.filter = "blur(10px)"; }
+
+else {y.style.filter = "blur(10px)";}}
+</script>
+
+
+<div id="pform">
+
+
+<!---PASSWORD FORM--->
+
+
+<form onSubmit="return false;" action="">
+
+    <input type="text" id="pswd" size="100">
+
+</form>
+
+<form>
+
+    <input class="button" type="button" value="ENTER" onclick="checkPswd();">
+    
+</form>
+
+
+<script type="text/javascript">
+window.addEventListener("keydown", checkKeyPressed, false);
+
+function checkKeyPressed(evt) {
+    if (evt.keyCode == "13") 
+    {checkPswd()}
+}
+</script>
+</div>
+
+
+
+
+
+
+<!---LASHBROOK--->
+
+<div id="lash"
+style="display: none;">
+
+<p
+style="
+color: whitesmoke;
+font-family: JMH; 
+font-size: 17; 
+text-align: left;
+margin:auto;">
+
+<span style="margin-left: 38%;font-size: 25;"> 
+Robert Lashbrook</span><br />
+<br />
+<br />
+
+I am fearful for my confidant’s life. Lott’s description of ROT sounds hellish, demonic, a torturous purgatory of an unfathomable nature. <br />
+A primeval, morose hellscape with no exit, no escape route other than the ambivalent chance of waking up. I am assembling an urgent request directed at The Agency, asking to cease these perverse voyages at once. I may be a man of science but I am a man of morals first and foremost. My dear Lott… my heart could not bear witness to your malady for it would shatter like a lightbulb under immense electrical current.
+<br />
+<br />
+ADDENDUM
+<br />
+<br />
+It’s been several hours since my previous entry, during which I’ve regrettably written and sent the request form. My sentimentality has worn off and my thoughts are stable. I might value Olsen as a colleague and a like-minded individual but I must remind myself that our pursuit of knowledge can not be tainted by these emotional outbursts. Our work in Topeka is far too important, I’m sure Dr. Olsen is aware of this. I am writing another letter, informing The Agency of my error. The tests will continue.
+</p>
+</div>
+
+<!---RUWET--->
+
+<div id="ruwet"
+style="display: none;">
+... .... . / .-.. .. . -.. 
+
+<p
+style="
+color: whitesmoke;
+font-family: JMH; 
+font-size: 17; 
+text-align: left;
+margin:auto;">
+
+<span style="margin-left: 40%;font-size: 25;"> 
+Darsah Ruwet</span><br />
+<br />
+
+<br />
+
+Olsen went into ROT last night. Described the fog, the dirt and the building. His fog was black, his dirt was plastic and his building was a church - most likely the Baptist church up the road from our lab. Interesting stuff.<br />
+<br />
+I’ve read into these symbols and my theory is as follows:<br />
+<br />
+Olsen’s fog being black is telling of his depressive state. His brain is most likely incapable of producing anything other than darkness because it’s all Olsen feeds into it.<br />
+<br />
+His dirt was plastic, likely a reflection of an artificial nature, his relationships with people may all be forced either by circumstance (such as work) or by a parasitic gain, maintaining them purely for his own benefit. <br />
+<br />
+His building being a church points to a religious nature, or a need for one. He may be aware of the scale of these experiments, linking them to a god-like presence. Knowing the Baptist church is close-by, he most likely recalled the most obvious symbol for god.<br />
+<br />
+Olsen also mentions an eye above him. It’s odd that it appeared during his first ROT, but may be a sign we’re on the right track.<br />
+<br />
+He recalls neither a field nor a dying sensation.<br />
+<br />
+Summary: excellent results after only one session, much better than expected. Will continue with testing.
+</p>
+</div>
+
+<!---OLSEN--->
+
+<div id="olsen"
+style="display: none;">
+
+<p
+style="
+color: whitesmoke;
+font-family: JMH; 
+font-size: 17; 
+text-align: left;
+margin:auto;">
+
+<span style="margin-left: 42%;font-size: 25;"> Lott Olsen</span><br />
+
+<br />
+
+<br />
+Just had ROT tested on myself for the first time. It was odd to say the least. Falling asleep was difficult because of the stress. Ruwet assured me I wouldn't feel anything but man did it hurt as a bitch. I felt the entire needle going in. Hoping the hole will heal.<br />
+<br />
+Anyway, at first it was just run-of-the-mill sleep, just dark and whatever. Nothing happening, no dream, nothing. And then it happened. I awoke fully nude in an empty field surrounded by black fog, a vast landscape of nothingness. It was terrifying to say the least. The dirt beneath my feet felt flat, textureless. Like a piece of plastic. I had at least 6 more hours of sleep so I decided to start walking in one direction.
+Walking in ROT is weird, doesn't feel like you're moving at all. There is no source of light to cast shadows, no objects to see, nothing to tell your mind that you’re moving. Yet I walked.<br />
+<br /> After what felt like approx. 10 minutes, a large shape slowly appeared in the fog. A building! I ran towards it for another ~10 minutes until it was about 100 meters from me. It was a church. An old, mid-century, run down church. A simple design, a door on the left hand side of the front of the church, a cross-shaped stained glass window next to the door. Triangular roofing with a cross at the very top. The light from inside was warm and flickering, like a candle flame. Finally, I approached the church only to discover the door was completely flat, like it was built into the wall. There was no handle, the relief on the door had no depth - just like the ground, it was like a smooth, flat piece of plastic. <br />
+<br />For the first time since arriving in this place, I heard a sound. It was coming from inside the church. Muffled and quiet, it sounded like speech but I couldn't make out any words. I put my ear to the door in an attempt to hear better but the sound stopped as soon as I did. And then, a loud bang from the other side of the door, right where my ear was placed. Something hit the door on the other side. I recoiled in fear and looked around me. Behind me and all around the church was a barbed wire fence. Underneath my feet, short blades of grass. Past the fence, an intersection with unaligned road markings. Concrete. A sidewalk. Another sound - shuffling and metallic scraping on asphalt, like dragging a heavy knife along the street in short bursts. The sound started behind the church and kept going down the street until it disappeared in the fog. I looked up at the non-existent sky only to see an eye staring back at me. As soon as I did, I woke up.
+
+
+
+</div>
+
+
+<!---PASSWORD CHECKER SCRIPT----->
+
+
+<script type="text/javascript">
+    function checkPswd() {
+
+        var hidetext1 = document.getElementById("lash");
+        var hidetext2 = document.getElementById("ruwet");
+        var hidetext3 = document.getElementById("olsen");
+
+        var hideeye1 = document.getElementById("eye1");
+        var hideeye3 = document.getElementById("eye2");
+        var hideeye2 = document.getElementById("eye3");
+
+        var myAudio1 = document.getElementById("myAudio1");
+        var myAudio2 = document.getElementById("myAudio2");
+        var myAudio3 = document.getElementById("myAudio3");
+
+        var exit = document.getElementById("mouth");
+
+        var confirmPassword1 = 
+        "7172";
+
+        var confirmPassword2 = 
+        "7063";
+
+        var confirmPassword3 = 
+        "she lied";
+
+        var password = document.getElementById("pswd").value;
+
+        if (password == confirmPassword1)      
+            {hidetext1.style.display = "block";
+            hidetext2.style.display  = "none";
+            hidetext3.style.display  = "none";
+            hideeye1.style.display   = "block";
+            hideeye2.style.display   = "none";
+            hideeye3.style.display   = "none";
+             myAudio1.pause();
+             myAudio2.pause();
+             myAudio3.pause();
+        }
+
+        else if (password == confirmPassword2)      
+            {hidetext2.style.display = "block";
+             hidetext1.style.display = "none";
+             hidetext3.style.display = "none";
+             hideeye2.style.display  = "block";
+             hideeye3.style.display  = "none";
+             hideeye1.style.display  = "none";
+             myAudio1.pause();
+             myAudio2.pause();
+             myAudio3.pause();
+         }
+
+        else if (password == confirmPassword3)      
+            {hidetext3.style.display = "block";
+             hidetext1.style.display = "none";
+             hidetext2.style.display = "none";
+             hideeye2.style.display  = "none";
+             myAudio1.pause();
+             myAudio2.pause();
+             myAudio3.pause();
+             exit.style.display  = "block";
+         }}
+</script>
+
+</div>
+
+
+
+</body>
+</html>

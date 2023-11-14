@@ -1,0 +1,146 @@
+<html>
+
+<head>
+	<title>baron of flies</title>
+      <link rel="icon" href="favicon.png" type="image/png">
+
+	<style>
+
+     body {background:black;}
+	 @font-face { font-family: JMH; src: url('JMH.ttf'); } 
+     @font-face { font-family: JMHB; src: url('mom.ttf');  }
+
+
+a:link {color: whitesmoke; text-decoration: none;}
+a:visited {color: whitesmoke; text-decoration: none;}
+a:hover {color: darkred;}   
+
+#myVideo {
+    animation: fadeIn 10s;
+  position: fixed;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity:0; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity:1; }
+}
+
+
+
+
+    </style>
+
+
+</head>
+
+
+
+
+<body onload="setInterval(fade, 7000);setTimeout(acc, 70000);textSequence(i);">
+
+
+
+<video autoplay muted loop id="myVideo" >
+<source src="videos/fliesbg.mp4" type="video/mp4">
+</video>
+
+<div id="accept" 
+style="display: none;
+position: relative;
+font-family: JMH; 
+font-size: 50; 
+color: whitesmoke;
+text-align: center;
+top: 700px;">
+<a href="https://www.youtube.com/@beyondflies">ACCEPT THE TRUTH</a>
+</div>
+
+<div id="sequence" style="
+position: relative;
+font-family: JMHB; 
+font-size: 50; 
+color: whitesmoke;
+text-align: center;
+top: 700px;
+">
+</div>
+
+
+<script type="text/javascript">
+
+    var q1 = document.getElementById("sequence");
+
+    function fade(){
+
+document.body.removeChild(q1);
+document.body.appendChild(q1);
+
+    q1.style.animation = "fadeInOut 7s";}
+
+
+</script>
+
+<script type="text/javascript">
+
+    var ac = document.getElementById("accept");
+
+    function acc(){
+
+document.body.removeChild(q1);
+document.body.appendChild(q1);
+
+    ac.style.animation = "fadeIn 3s";
+    ac.style.display = "block";}
+
+
+</script>
+
+
+
+
+
+    <script>
+        var example = [
+            'Baron of flies.',
+            'I have been observing you.', 
+            'Do you remember this place?', 
+            'In this place you died.', 
+            'In this place you were born.',
+            'Beneath this dirt you rot.',
+            'The flies swarm you.',
+            'Born to rot,',
+            'died to belong.',
+            'Spread my message, Baron of flies.'];
+
+        textSequence(0);
+        function textSequence(i) {
+
+            if (example.length > i) {
+                setTimeout(function() {
+                    document.getElementById("sequence").innerHTML = example[i];
+                    textSequence(++i);
+                }, 7000); // 1 second (in milliseconds)
+
+            } 
+
+        }
+    </script>
+
+
+</body>
+
+</html>
